@@ -21,5 +21,10 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         {
             resultDisplay.FillResults();
         }
+
+        private void resultDisplay_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

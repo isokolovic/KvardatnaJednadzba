@@ -91,6 +91,7 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
             this.numericUpDownA.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownA.TabIndex = 1;
             this.numericUpDownA.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownA.ValueChanged += new System.EventHandler(this.numericUpDownA_ValueChanged);
             // 
             // numericUpDownB
             // 
@@ -110,6 +111,7 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
             this.numericUpDownB.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownB.TabIndex = 3;
             this.numericUpDownB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownB.ValueChanged += new System.EventHandler(this.numericUpDownA_ValueChanged);
             // 
             // label2
             // 
@@ -138,6 +140,7 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
             this.numericUpDownC.Size = new System.Drawing.Size(120, 22);
             this.numericUpDownC.TabIndex = 5;
             this.numericUpDownC.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numericUpDownC.ValueChanged += new System.EventHandler(this.numericUpDownA_ValueChanged);
             // 
             // label3
             // 

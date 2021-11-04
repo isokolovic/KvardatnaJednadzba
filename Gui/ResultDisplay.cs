@@ -44,5 +44,10 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
 
             textBoxRoot2.Text = qe.Roots[1].ToString();
         }
+
+        private void numericUpDownA_ValueChanged(object sender, EventArgs e)
+        {
+            FillResults();
+        }
     }
 }
