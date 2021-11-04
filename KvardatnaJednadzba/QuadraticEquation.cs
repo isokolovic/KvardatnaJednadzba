@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace KvardatnaJednadzba
 {
-    class QuadraticEquation
+    public class QuadraticEquation
     {
         public QuadraticEquation() //objekt će imati defaultne vrijednosti, za double = 0
         {

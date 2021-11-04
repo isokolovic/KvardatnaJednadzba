@@ -60,6 +60,9 @@
     <Compile Include="ResultDisplay.Designer.cs">
       <DependentUpon>ResultDisplay.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -85,6 +88,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KvardatnaJednadzba\KvardatnaJednadzba.csproj">
+      <Project>{0241dd2c-5a5b-4e69-b87e-a729d353bc94}</Project>
+      <Name>KvardatnaJednadzba</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

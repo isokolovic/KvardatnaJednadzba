@@ -29,13 +29,44 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonEvaluate = new System.Windows.Forms.Button();
+            this.resultDisplay = new VSite.CSharp.KvadratnaJednadzba.Gui.ResultDisplay();
+            this.SuspendLayout();
+            // 
+            // buttonEvaluate
+            // 
+            this.buttonEvaluate.Location = new System.Drawing.Point(25, 304);
+            this.buttonEvaluate.Name = "buttonEvaluate";
+            this.buttonEvaluate.Size = new System.Drawing.Size(92, 23);
+            this.buttonEvaluate.TabIndex = 1;
+            this.buttonEvaluate.Text = "&Evaluate";
+            this.buttonEvaluate.UseVisualStyleBackColor = true;
+            this.buttonEvaluate.Click += new System.EventHandler(this.buttonEvaluate_Click);
+            // 
+            // resultDisplay
+            // 
+            this.resultDisplay.Location = new System.Drawing.Point(12, 12);
+            this.resultDisplay.Name = "resultDisplay";
+            this.resultDisplay.Size = new System.Drawing.Size(219, 286);
+            this.resultDisplay.TabIndex = 0;
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(366, 355);
+            this.Controls.Add(this.buttonEvaluate);
+            this.Controls.Add(this.resultDisplay);
+            this.Name = "Form1";
+            this.Text = "Quadratic Equation";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private ResultDisplay resultDisplay;
+        private System.Windows.Forms.Button buttonEvaluate;
     }
 }
 
