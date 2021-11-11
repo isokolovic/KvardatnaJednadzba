@@ -15,16 +15,29 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         public Form1()
         {
             InitializeComponent();
+            functionPanel1.Function = resultDisplay.qe.Y; //Za zadani X izračunava Y
         }
 
         private void buttonEvaluate_Click(object sender, EventArgs e)
         {
-            resultDisplay.FillResults();
+            //resultDisplay.FillResults();
         }
 
         private void resultDisplay_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void resultDisplay_CoefficientsChanged(object sender, EventArgs e)
+        {
+            functionPanel1.Invalidate(); //Refresh function panela
+        }
+
+
     }
 }

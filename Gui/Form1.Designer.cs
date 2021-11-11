@@ -29,8 +29,20 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         /// </summary>
         private void InitializeComponent()
         {
+            this.functionPanel1 = new VSite.CSharp.KvadratnaJednadzba.Gui.FunctionPanel();
             this.resultDisplay = new VSite.CSharp.KvadratnaJednadzba.Gui.ResultDisplay();
+            ((System.ComponentModel.ISupportInitialize)(this.functionPanel1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // functionPanel1
+            // 
+            this.functionPanel1.BackColor = System.Drawing.SystemColors.Window;
+            this.functionPanel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.functionPanel1.Location = new System.Drawing.Point(238, 13);
+            this.functionPanel1.Name = "functionPanel1";
+            this.functionPanel1.Size = new System.Drawing.Size(654, 509);
+            this.functionPanel1.TabIndex = 1;
+            this.functionPanel1.TabStop = false;
             // 
             // resultDisplay
             // 
@@ -38,16 +50,20 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
             this.resultDisplay.Name = "resultDisplay";
             this.resultDisplay.Size = new System.Drawing.Size(219, 286);
             this.resultDisplay.TabIndex = 0;
+            this.resultDisplay.CoefficientsChanged += new System.EventHandler(this.resultDisplay_CoefficientsChanged);
             this.resultDisplay.Load += new System.EventHandler(this.resultDisplay_Load);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(366, 355);
+            this.ClientSize = new System.Drawing.Size(904, 534);
+            this.Controls.Add(this.functionPanel1);
             this.Controls.Add(this.resultDisplay);
             this.Name = "Form1";
             this.Text = "Quadratic Equation";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.functionPanel1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -55,6 +71,7 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         #endregion
 
         private ResultDisplay resultDisplay;
+        private FunctionPanel functionPanel1;
     }
 }
 

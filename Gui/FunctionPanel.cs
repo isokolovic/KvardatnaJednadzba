@@ -33,7 +33,9 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
             set { m_function = value; }
         }
 
-        protected override void OnPaint(PaintEventArgs e)
+        // Refresh kontrole za iscrtavanje -> tipa kad se minimizira prozor, refresh poziva base.OnPaint()
+        // Bilo kakvo crtanje raditi u OnPaint() metodi
+        protected override void OnPaint(PaintEventArgs e) 
         {
             base.OnPaint(e);
             DrawCoordinateSystem(e.Graphics);
@@ -74,7 +76,7 @@ namespace VSite.CSharp.KvadratnaJednadzba.Gui
         {
             using (Pen pen = new Pen(Color.Gray))
             {
-                //MarkAxes(graphics, pen);
+                MarkAxes(graphics, pen);
                 graphics.DrawLine(pen, 0, ClientRectangle.Height / 2,
                     ClientRectangle.Width, ClientRectangle.Height / 2);
                 graphics.DrawLine(pen, ClientRectangle.Width / 2, 0,
